@@ -57,5 +57,28 @@ namespace HotelBooking.UnitTests
             //Assert
             Assert.False(isBooked);
         }
+
+        [Fact]
+        public void GetFullyOccupiedDates_GivenDates_ReturnsOccupancyDatesList()
+        {
+            //Arrange
+            var startDate = DateTime.Today.AddDays(10);
+            var endDate = DateTime.Today.AddDays(20);
+            //Act
+            var occupancyDatesList = bookingManager.GetFullyOccupiedDates(startDate, endDate);
+            //Assert
+            Assert.All(occupancyDatesList, n => Assert.NotEmpty(occupancyDatesList));
+        }
+
+        [Fact]
+        public void GetFullyOccupiedDates_StartDateLaterThanEndDate_ThrowsArgumentException()
+        {
+            //Arrange
+            DateTime startDate = DateTime.Today.AddDays(1);
+            DateTime endDate = DateTime.Today;
+            //Assert
+            //Exception is thrown if the start date is greater than the end date.
+            Assert.Throws<ArgumentException>(() => bookingManager.GetFullyOccupiedDates(startDate, endDate));
+        }
     }
 }
