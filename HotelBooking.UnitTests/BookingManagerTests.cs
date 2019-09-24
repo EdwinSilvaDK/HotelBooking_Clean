@@ -9,7 +9,8 @@ namespace HotelBooking.UnitTests
     {
         private IBookingManager bookingManager;
 
-        public BookingManagerTests(){
+        public BookingManagerTests()
+        {
             DateTime start = DateTime.Today.AddDays(10);
             DateTime end = DateTime.Today.AddDays(20);
             IRepository<Booking> bookingRepository = new FakeBookingRepository(start, end);
@@ -35,5 +36,26 @@ namespace HotelBooking.UnitTests
             Assert.NotEqual(-1, roomId);
         }
 
+        [Fact]
+        public void CreateBooking_RoomIsAvailable_ReturnsTrue()
+        {   
+            //Arrange
+            var booking = new Booking{StartDate = DateTime.Today.AddDays(21), EndDate =  DateTime.Today.AddDays(30)};
+            //Act
+            var isBooked = bookingManager.CreateBooking(booking);
+            //Assert
+            Assert.True(isBooked);
+        } 
+        
+        [Fact]
+        public void CreateBooking_RoomIsNotAvailable_ReturnsFalse()
+        {
+            //Arrange
+            var booking = new Booking{StartDate = DateTime.Today.AddDays(10), EndDate =  DateTime.Today.AddDays(20)};
+            //Act
+            var isBooked = bookingManager.CreateBooking(booking);
+            //Assert
+            Assert.False(isBooked);
+        }
     }
 }
