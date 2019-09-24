@@ -58,6 +58,19 @@ namespace HotelBooking.UnitTests
             Assert.False(isBooked);
         }
 
+        //Data driven test using ClassData attributes
+        [Theory]
+        [ClassData(typeof(BookingTestData))]
+        public void CreateBooking_IsRoomAvailable_ExpectsTrueAndFalse(DateTime startDate, DateTime endDate, bool expectedResult)
+        {
+            //Arrange
+            var booking = new Booking { StartDate = startDate, EndDate = endDate };
+            //Act
+            var isBooked = bookingManager.CreateBooking(booking);
+            //Assert
+            Assert.Equal(expectedResult, isBooked);
+        }
+
         [Fact]
         public void GetFullyOccupiedDates_GivenDates_ReturnsOccupancyDatesList()
         {
