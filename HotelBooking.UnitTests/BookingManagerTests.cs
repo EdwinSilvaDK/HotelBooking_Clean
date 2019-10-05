@@ -35,5 +35,14 @@ namespace HotelBooking.UnitTests
             Assert.NotEqual(-1, roomId);
         }
 
+
+        //[Fact]
+        //public void CreateBooking_
+        // createBooking
+
+        // get fully occupied days
+
+        // utilize data driven testing
+
     }
 }
