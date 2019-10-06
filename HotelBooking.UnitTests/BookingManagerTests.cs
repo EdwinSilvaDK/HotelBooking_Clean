@@ -34,10 +34,50 @@ namespace HotelBooking.UnitTests
             // Assert
             Assert.NotEqual(-1, roomId);
         }
+    
 
+        [Fact]
+        public void CreateBooking_RoomIdIsMoreThanOr0_ReturnsTrue()
+        {
 
-        //[Fact]
-        //public void CreateBooking_
+            //Arrange
+            var booking = new Booking { StartDate = DateTime.Today.AddDays(20), EndDate = DateTime.Today.AddDays(30) };
+
+            //Act
+            var isBooked = bookingManager.CreateBooking(booking);
+
+            //Assert
+            Assert.True(isBooked);
+        }
+
+        [Fact]
+        public void CreateBooking_RoomIdIsLessThan0_ReturnsFalse()
+
+        {
+            //Arrange
+            var booking = new Booking { StartDate = DateTime.Today.AddDays(13), EndDate = DateTime.Today.AddDays(14) };
+
+            //Act
+            var isBooked = bookingManager.CreateBooking(booking);
+
+            //Assert
+            Assert.False(isBooked);
+        }
+
+        [Theory]
+        [ClassData(typeof(BookingTestDataDriven))]
+        public void CreateBooking_IsRoomAvailable_ExpectedShould(DateTime startDate, DateTime endDate, bool expectedResult)
+        {
+            // Arrange
+            var booking = new Booking{ StartDate = startDate, EndDate = endDate };
+
+            // Act
+            var isBooked = bookingManager.CreateBooking(booking);
+
+            // Assert
+            Assert.Equal(isBooked, expectedResult);
+
+        }
         // createBooking
 
         // get fully occupied days
