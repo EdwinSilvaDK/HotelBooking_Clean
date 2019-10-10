@@ -54,8 +54,10 @@ namespace HotelBooking.UnitTests
         {
             // Arrange
             DateTime date = DateTime.Today.AddDays(1);
+
             // Act
             int roomId = bookingManager.FindAvailableRoom(date, date);
+
             // Assert
             Assert.NotEqual(-1, roomId);
         }
