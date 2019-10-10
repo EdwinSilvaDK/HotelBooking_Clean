@@ -110,11 +110,7 @@ namespace HotelBooking.UnitTests
             // Arrange
             var booking = new Booking { StartDate = DateTime.Today.AddDays(3), EndDate = DateTime.Today.AddDays(2) };
 
-            // Act
-            Exception Exception = Assert.Throws<ArgumentException>(() => bookingManager.GetFullyOccupiedDates(booking.StartDate, booking.EndDate));
-
-            // Assert
-            Assert.Equal(Exception.Message, "The start date cannot be later than the end date.");
+            Assert.Throws<ArgumentException>(() => bookingManager.GetFullyOccupiedDates(booking.StartDate, booking.EndDate));
         }
 
 
