@@ -9,6 +9,8 @@ namespace HotelBooking.Core
         private IRepository<Booking> bookingRepository;
         private IRepository<Room> roomRepository;
 
+       
+
         // Constructor injection
         public BookingManager(IRepository<Booking> bookingRepository, IRepository<Room> roomRepository)
         {
@@ -39,6 +41,7 @@ namespace HotelBooking.Core
                 throw new ArgumentException("The start date cannot be in the past or later than the end date.");
 
             var activeBookings = bookingRepository.GetAll().Where(b => b.IsActive);
+
             foreach (var room in roomRepository.GetAll())
             {
                 var activeBookingsForCurrentRoom = activeBookings.Where(b => b.RoomId == room.Id);
