@@ -61,7 +61,27 @@ namespace HotelBooking.UnitTests
             // Assert
             Assert.NotEqual(-1, roomId);
         }
-    
+
+        [Fact]
+        public void CreateBooking_StartDateNotInTheFuture_ThrowsArgumentException()
+        {
+            var booking = new Booking { StartDate = DateTime.Today.AddDays(-1), EndDate = DateTime.Today.AddDays(9) };
+            Assert.Throws<ArgumentException>(() => bookingManager.CreateBooking(booking));
+        }
+
+        [Fact]
+        public void CreateBooking_StartDateNotBeforeEndDate_ThrowsArgumentException()
+        {
+            var booking = new Booking { StartDate = DateTime.Today.AddDays(30), EndDate = DateTime.Today.AddDays(29) };
+            Assert.Throws<ArgumentException>(() => bookingManager.CreateBooking(booking));
+        }
+
+        [Fact]
+        public void CreateBooking_StartDateIsToday_ThrowsArgumentException()
+        {
+            var booking = new Booking { StartDate = DateTime.Today, EndDate = DateTime.Today.AddDays(5) };
+            Assert.Throws<ArgumentException>(() => bookingManager.CreateBooking(booking));
+        }
 
         [Fact]
         public void CreateBooking_RoomIdIsMoreThanOr0_ReturnsTrue()
