@@ -62,57 +62,8 @@ namespace HotelBooking.UnitTests
             Assert.NotEqual(-1, roomId);
         }
 
-        [Fact]
-        public void CreateBooking_StartDateNotInTheFuture_ThrowsArgumentException()
-        {
-            var booking = new Booking { StartDate = DateTime.Today.AddDays(-1), EndDate = DateTime.Today.AddDays(9) };
-            Assert.Throws<ArgumentException>(() => bookingManager.CreateBooking(booking));
-        }
-
-        [Fact]
-        public void CreateBooking_StartDateNotBeforeEndDate_ThrowsArgumentException()
-        {
-            var booking = new Booking { StartDate = DateTime.Today.AddDays(30), EndDate = DateTime.Today.AddDays(29) };
-            Assert.Throws<ArgumentException>(() => bookingManager.CreateBooking(booking));
-        }
-
-        [Fact]
-        public void CreateBooking_StartDateIsToday_ThrowsArgumentException()
-        {
-            var booking = new Booking { StartDate = DateTime.Today, EndDate = DateTime.Today.AddDays(5) };
-            Assert.Throws<ArgumentException>(() => bookingManager.CreateBooking(booking));
-        }
-
-        [Fact]
-        public void CreateBooking_RoomIdIsMoreThanOr0_ReturnsTrue()
-        {
-
-            //Arrange
-            var booking = new Booking { StartDate = DateTime.Today.AddDays(21), EndDate = DateTime.Today.AddDays(30) };
-
-            //Act
-            var isBooked = bookingManager.CreateBooking(booking);
-
-            //Assert
-            Assert.True(isBooked);
-        }
-
-        [Fact]
-        public void CreateBooking_RoomIdIsLessThan0_ReturnsFalse()
-
-        {
-            //Arrange
-            var booking = new Booking { StartDate = DateTime.Today.AddDays(13), EndDate = DateTime.Today.AddDays(14) };
-
-            //Act
-            var isBooked = bookingManager.CreateBooking(booking);
-
-            //Assert
-            Assert.False(isBooked);
-        }
-
         [Theory]
-        [ClassData(typeof(BookingTestDataDriven))]
+        [ClassData(typeof(BookingTestDataDriven))] //Contains 10 test cases
         public void CreateBooking_IsRoomAvailable_ExpectedShould(DateTime startDate, DateTime endDate, bool expectedResult)
         {
             // Arrange
