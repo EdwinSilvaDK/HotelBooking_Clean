@@ -58,15 +58,15 @@ namespace HotelBooking.SpecFlowTests
             endDate = DateTime.Today.AddDays(end);
         }
 
-        [When(@"When the dates have been entered")]
-        public void WhenWhenTheDatesHaveBeenEntered()
+        [When(@"the dates have been entered")]
+        public void WhenTheDatesHaveBeenEntered()
         {
             var booking = new Booking { StartDate = startDate , EndDate = endDate};
             result = bookingManager.CreateBooking(booking);
         }
         
         [Then(@"the result should return (.*)")]
-        public void ThenTheResultShouldReturnTrue(bool expectedResult)
+        public void ThenTheResultShouldReturnBoolean(bool expectedResult)
         {
             Assert.Equal(expectedResult, result);
         }

@@ -93,7 +93,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 9
  testRunner.And("I have specified the end date to be in 9 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
- testRunner.When("When the dates have been entered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("the dates have been entered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
  testRunner.Then("the result should return true", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -114,7 +114,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 15
  testRunner.And("I have specified the end date to be in 30 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 16
- testRunner.When("When the dates have been entered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("the dates have been entered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 17
  testRunner.Then("the result should return true", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -135,7 +135,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 21
  testRunner.And("I have specified the end date to be in 21 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 22
- testRunner.When("When the dates have been entered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("the dates have been entered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 23
  testRunner.Then("the result should return false", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -156,7 +156,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 27
  testRunner.And("I have specified the end date to be in 10 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 28
- testRunner.When("When the dates have been entered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("the dates have been entered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 29
  testRunner.Then("the result should return false", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -177,7 +177,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 33
  testRunner.And("I have specified the end date to be in 20 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 34
- testRunner.When("When the dates have been entered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("the dates have been entered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 35
  testRunner.Then("the result should return false", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -198,7 +198,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 39
  testRunner.And("I have specified the end date to be in 21 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 40
- testRunner.When("When the dates have been entered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("the dates have been entered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 41
  testRunner.Then("the result should return false", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -219,7 +219,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 45
  testRunner.And("I have specified the end date to be in 21 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 46
- testRunner.When("When the dates have been entered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("the dates have been entered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 47
  testRunner.Then("the result should return false", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -240,7 +240,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 51
  testRunner.And("I have specified the end date to be in 11 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 52
- testRunner.When("When the dates have been entered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("the dates have been entered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 53
  testRunner.Then("the result should return false", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -261,7 +261,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 57
  testRunner.And("I have specified the end date to be in 20 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 58
- testRunner.When("When the dates have been entered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("the dates have been entered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 59
  testRunner.Then("the result should return false", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -282,7 +282,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 63
  testRunner.And("I have specified the end date to be in 20 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 64
- testRunner.When("When the dates have been entered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("the dates have been entered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 65
  testRunner.Then("the result should return false", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
